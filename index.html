@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvemid@ | Seminario de "El Capital"</title>
+
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pensar_seminario/styles.css">
+    
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index/index.css">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script defer src="/js/main.js"></script> 
+    <script defer src="/js/index/main.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <img id="background" src="/source/main/background.svg" alt="">
+    <div class="title-main-box">
+    <div class="title-box">
+        <div class="logo-box"><img src="/source/main/escudo.svg" alt="" class="logo-main"></div>
+        <div class="title-main">Portal web del <br><span>Seminario de "<span class="typed-2"></span>"</span> <p><i>Una formación para la vida</i></p></div>
+    <a href="/indice.html" class="button-nextpage">Entrar</a>
+    </div>
+    </div> 
+<!-- ------------------------------- -->
+<!-- IF SCREEN IS NOT ENOUGH ------- -->
+<!-- ------------------------------- -->
+<div class="sorry-your-screen srry-msg-off" id="sorryScreen">
+    <div class="srry-msg-box">
+    <span class="srry-msg-icon"><i class='bx bxs-sad'></i></span>
+    <span>Lo sentimos en verdad... no podemos mostrarte el sitio porque el tamaño de tu dispositivo no te pemitirá tener una experiencia satisfactoria navegando. <br>Te pedimos que lo intentes en un dipositivo distinto y así podrás descubrir la historia del Seminario de "El Capital", una formación para la vida. <br>Disculpa las molestias</span>
+    <p>Recuerda que la dirección para encontarnos es <span class="srry-oursite">seminariodeelcapital.org</span></p>
+    <a href="https://google.com.mx" class="sorry-goway">Ahorita vuelvo</a>
+    </div>
+</div>
+
+<!-- ------------------------------- -->
+<!-- ------------------------------- -->
+<!-- ------------------------------- -->
+    
+<!-- ------------------------------- -->
+}
+<!-- ------------------------------- -->
+<div class="landscape-is-on">
+    <i class='bx bxs-mobile'></i>
+    <span>Por favor, gira el dispositivo verticalmente</span>
+</div>
+
+<!-- ------------------------------- -->
+<!-- ------------------------------- -->
+<!-- ------------------------------- -->
+    <script>
+        window.onload = function(){
+            if(screen.width<550){
+                document.getElementById("sorryScreen").classList.remove("srry-msg-off");
+                document.getElementById("sorryScreen").classList.add("srry-msg-on");
+            }
+        }
+    </script>
+</body>
+</html>  
