@@ -1,0 +1,246 @@
+:root{
+    --primerc:#1B1B1B;
+    --secondc:#FEA014 ;
+    --thirdc:#C52D3E ;
+    --fonta: 'Zilla Slab', serif;
+    --fontb: 'Josefin Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.nav-indice-box{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.menu-item-indice{
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: var(--fontb);
+    font-weight: bold;
+}
+#menu_item_9{
+    padding: 10px 10px;
+    background-color: #e6d4c0;
+    border-radius: 7px ;
+    font-weight: bolder;
+}
+@media screen and (min-width:800px){
+    .menu-item-indice{
+        font-size: 25px;
+        font-weight: normal;
+    }
+}
+.menu-item-indice:hover{
+    color: var(--thirdc);
+    letter-spacing: 3px;
+    transition: letter-spacing .2s;
+}
+
+
+/* ------------------- */
+/* -----Marxito------- */
+/* ------------------- */
+.marxito{
+    position: fixed;
+    bottom: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(27, 27, 27,0.9);
+    padding: 10px 10px 0px 10px ;
+}
+.marxito-opened{
+    opacity: 1;
+    transform: scale(100%);
+    pointer-events:all;
+    transition: opacity .5s;
+    transition: transform .5s;
+    position: fixed;
+    z-index: 100;
+}
+.marxito-closed{
+    opacity: 0;
+    transform: scale(0%);
+    pointer-events:none;
+    transition: opacity .5s;
+    transition: transform .5s;
+}
+.marxito img{
+    height: 50%;
+    position: absolute;
+    bottom: 0px;
+}
+.close-marxito{
+    color: white;
+    position: fixed;
+    top: 3%;
+    right: 5%;
+    font-size: 60px;
+    
+    background-color: var(--secondc);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close-marxito:hover{
+    color: var(--thirdc);
+    transition: color .5s;
+}
+@media screen and (max-width:716px) {
+    .close-marxito{
+        font-size: 40px;
+
+        width: 50px;
+        height: 50px;
+    }
+}
+/* docs marxito */
+.docs-marxito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    top: 30px;
+    font-family: var(--fonta);
+    font-size: 19px;
+    text-decoration:none;
+    padding: 10px 10px;
+}
+.doc-download-option{
+    color: #000;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color:#e6d4c0;
+    margin:10px 0px;
+    border-radius: 7px;
+    width: 100%;
+}
+.doc-download-option:hover{
+    transition: color .5s;
+    transition: letter-spacing .5s;
+    letter-spacing: 1px;
+    color: var(--thirdc);
+}
+.doc-download-option span {
+    font-family: var(--fonta);
+    font-weight: bold;
+}
+@media screen and (max-width:700px) {
+    .docs-marxito{
+        width: 70%;
+        font-size: 16px;
+    }
+}
+
+/* -------Instructions-------- */
+#platformUse{
+    position: fixed;
+    bottom: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(27, 27, 27,0.9);
+    padding: 10px 10px 0px 10px ;
+}
+.platformUse-opened{
+    opacity: 1;
+    transform: scale(100%);
+    pointer-events:all;
+    transition: opacity .5s;
+    transition: transform .5s;
+    position: fixed;
+    z-index: 100;
+}
+.platformUse-closed{
+    opacity: 0;
+    transform: scale(0%);
+    pointer-events:none;
+    transition: opacity .5s;
+    transition: transform .5s;
+}
+.close-platformUse{
+    color: white;
+    position: fixed;
+    top: 3%;
+    right: 5%;
+    font-size: 60px;
+    background-color: var(--secondc);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close-platformUse:hover{
+    color: var(--thirdc);
+    transition: color .5s;
+}
+@media screen and (max-width:716px) {
+    .close-platformUse{
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+    }
+}
+.massage-platformUse{
+    color: white;
+    font-family: var(--fontb);
+    font-size: 20px;
+    width: 70%;
+    padding: 30px 20px;
+    background-color: #1B1B1B;
+    padding: 20px 20px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10vh;
+    text-align: center;
+}
+.image-platformUse{
+ width: 100%;
+ display: flex;
+ justify-content:center;
+}
+.image-platformUse svg{
+    width: 80vw;
+    margin: -60px -60px;
+}
+.st1{
+    animation-name: instructionUse;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    animation-direction: alternate;
+}
+
+
+@keyframes instructionUse {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}

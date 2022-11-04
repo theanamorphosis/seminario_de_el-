@@ -1,0 +1,189 @@
+:root{
+    --primerc:#1B1B1B;
+    --secondc:#FEA014 ;
+    --thirdc:#C52D3E ;
+    --fonta: 'Zilla Slab', serif;
+    --fontb: 'Josefin Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#background{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 0;
+}
+.title-main-box{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.title-box{
+    width: 60vw;
+    height: 90vh;    
+    background-color:rgba(197, 45, 62, .9);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+@media screen and (max-width:1000px) {
+    .title-box{
+        width: 80vw;
+        height: fit-content;
+    }
+    .logo-box img{
+        width: 90%;
+    }
+}
+.logo-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.logo-box img{
+    width: 50%;
+}
+.title-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0px;
+    color: #fff;
+    font-family: var(--fonta);
+    font-size: 25px;
+    padding: 0px 20px;
+}
+.button-nextpage{
+    color: #fff;
+    font-size: 22px;
+    font-family: var(--fonta);
+    text-decoration: none;
+    padding: 20px 20px;
+    margin: 10px 0px;
+    background-color: var(--secondc);
+    border-radius: 20px;
+}
+.button-nextpage:hover{
+    color: var(--thirdc);
+    letter-spacing: 3px;
+    transition: letter-spacing .2s;
+}
+/* text */
+.title-main span{
+    font-family: var(--fontb);
+}
+.title-main p{
+    font-size: 21px;
+    margin-top:15px;
+    text-align: center;
+    font-family: var(--fontb);
+}
+@media screen and (max-height:850px){
+    .logo-box img{
+        width: 38%;
+    }
+}
+@media screen and (max-width:500px) {
+    .logo-box img{
+        width: 70%;
+    }
+    .title-main{
+        font-size: 1.3em;
+    }
+    .title-main p{
+        font-size: .8em;
+    }
+}
+
+/*---------------*/
+/* SORRY MASSAGE DUE YOUR SCREEN */
+/* -------------- */
+.sorry-your-screen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 0.9);
+    top: 0;
+    left:0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.srry-msg-box{
+    width: 80%;
+    height: 80%;
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    color: #fff;
+    font-family: var(--fontb);
+    font-size: 16px;
+    text-align: center;
+    background-color: #1B1B1B;
+    border-radius: 10px;
+    padding: 30px;
+}
+.srry-msg-icon{
+    color: white;
+    font-size: 50px;
+    padding: 10px 0px;
+}
+.srry-oursite{
+    color: var(--secondc);
+    font-family: var(--fonta);
+}
+.sorry-goway{
+    padding: 10px 10px;
+    background-color: var(--secondc);
+    color: #fff;
+    font-family: var(--fonta);
+    font-size: 20px;
+    border-radius: 7px;
+    margin-top: 50px;
+    text-decoration: none;
+}
+.sorry-goway:hover{
+    color: var(--thirdc);
+    transition: color .5s;
+}
+.srry-msg-off{
+    transform: scale(0%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+.srry-msg-on{
+    transform: scale(100%);
+    opacity: 1;
+    pointer-events: all;
+    transition: all .5s;
+}

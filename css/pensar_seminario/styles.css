@@ -1,0 +1,90 @@
+:root{
+    --primerc:#1B1B1B;
+    --secondc:#FEA014 ;
+    --thirdc:#C52D3E ;
+    --fonta: 'Zilla Slab', serif;
+    --fontb: 'Josefin Sans', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.box-pensar_seminario{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.document-pensar_seminario{
+    display: flex;
+    width: 80%;
+    height: 20%;
+    background-color: #e6d4c0;
+}
+.icon-document{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.icon-document img{
+    height: 50%;
+    width: fit-content;
+}
+.name-document{
+    font-family: var(--fontb);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+    font-size: 17px;
+    text-align: center;
+}
+.icon-download-document{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondc);
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 24px;
+}
+.icon-download-document:hover{
+    color:var(--thirdc);
+    transition: color .5s;
+}
+@media screen and (max-width:1164px) {
+    .document-pensar_seminario{
+        flex-direction: column;
+    }
+    .icon-document{
+        display: none;
+
+    }
+    .name-document{
+        font-size: 17px;
+        padding: 10px 10px;
+        width: 100%;
+        height: 50%;
+    }
+    .icon-download-document{
+        padding: 10px 10px;
+        width: 100%;
+        height: 50%;
+
+    }
+}
+
+

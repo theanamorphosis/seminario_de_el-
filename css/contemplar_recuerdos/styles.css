@@ -1,0 +1,117 @@
+:root{
+    --primerc:#1B1B1B;
+    --secondc:#FEA014 ;
+    --thirdc:#C52D3E ;
+    --fonta: 'Zilla Slab', serif;
+    --fontb: 'Josefin Sans', sans-serif;
+}
+/* Gallery */
+.gallery{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 30px;
+}
+.gallery-img{
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+    }
+.gallery-item{
+    border-radius: 0px 7px 0px 0px;
+    position: relative;
+    height:30%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+
+}
+/* --- */
+
+/* --- */
+.gallery-description{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: var(--fontb);
+    font-size: 15px;
+    background-color:#e6d4c0;
+    padding: 3px 0px;
+    font-weight: bold;
+
+}
+/* Full photo window */
+.fullphoto{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background-color: rgba(27, 27, 27,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+.fullimage{
+    width: 70%;
+    max-height: 90vh;
+    object-fit: scale-down;
+    box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.75);
+
+}
+@media screen and (max-width:564px) {
+    .fullimage{
+        width: 90%;
+    }
+}
+/* Close-button */
+.close-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondc);
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 25;
+    right: 40px;
+    top: 40px; 
+    font-size: 60px;
+}
+.close-button:hover{
+    color: var(--thirdc);
+    transition: color .5s;
+}
+/* Unshowed fullphoto-window */
+.unshowed-fullphoto-window{
+    opacity: 0;
+    transform: scale(0%);
+    pointer-events:none;
+    transition: opacity .5s;
+    transition: transform .5s;
+}
+.showed-fullphoto-window{
+    opacity: 1;
+    transform: scale(100%);
+    pointer-events:all;
+    cursor: pointer;
+    transition: opacity .5s;
+    transition: transform .5s;
+    position: fixed;
+    z-index: 1000;
+}
